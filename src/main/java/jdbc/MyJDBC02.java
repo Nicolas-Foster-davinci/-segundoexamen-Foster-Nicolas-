@@ -21,10 +21,10 @@ public class MyJDBC02 {
             consultaPreparada.executeUpdate();
             conexion.commit();
 
-            System.out.println("id nombre apellido");
+            System.out.println("id dni nombre apellido");
             ResultSet mostrarRegistros = statement.executeQuery("SELECT * FROM estudiante;");
             while(mostrarRegistros.next()){
-                System.out.println(mostrarRegistros.getString(1) + " " + mostrarRegistros.getString(3) + " " + mostrarRegistros.getString(4));
+                System.out.println(mostrarRegistros.getString(1) + " " + mostrarRegistros.getString(2) + mostrarRegistros.getString(3) + " " + mostrarRegistros.getString(4));
             }
 
         } catch (SQLException sqlException){
